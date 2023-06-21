@@ -4,6 +4,7 @@ import io.demo.student_management.model.Teacher;
 import io.demo.student_management.repository.TeacherRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -20,6 +21,7 @@ public class TeacherService {
         return teacherRepository.findById(id);
     }
 
+    @Transactional
     public Mono<Teacher> create(Teacher teacher) {
         return teacherRepository.save(teacher);
     }

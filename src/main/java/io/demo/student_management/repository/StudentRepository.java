@@ -8,6 +8,6 @@ import reactor.core.publisher.Flux;
 
 @Repository
 public interface StudentRepository extends R2dbcRepository<Student, Long> {
-    @Query("SELECT s.* FROM student s JOIN student_course sc ON s.id = sc.studentId WHERE sc.id = :courseId")
+    @Query("SELECT s.* FROM student s JOIN student_course sc ON s.id = sc.student_id WHERE sc.id = :courseId")
     Flux<Student> getStudentsByCourseId(Long courseId);
 }

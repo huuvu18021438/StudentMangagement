@@ -28,8 +28,8 @@ public class Teacher {
     private List<Course> courses;
 
     @CreatedDate
-    private LocalDateTime created_date;
+    private LocalDateTime createdDate;
 
     @LastModifiedDate
-    private LocalDateTime last_modified_date;
+    private LocalDateTime lastModifiedDate;
 }

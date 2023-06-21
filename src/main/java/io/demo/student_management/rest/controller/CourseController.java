@@ -6,13 +6,15 @@ import io.demo.student_management.rest.reource.CourseResource;
 import io.demo.student_management.rest.reource.NewOrUpdateCourseResource;
 import io.demo.student_management.service.CourseService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/Courses")
+@RequestMapping("/courses")
 @RequiredArgsConstructor
+@Slf4j
 public class CourseController {
     private final CourseService courseService;
     private final CourseMapper courseMapper;

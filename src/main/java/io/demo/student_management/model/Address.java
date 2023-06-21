@@ -24,8 +24,8 @@ public class Address {
     private String street;
 
     @CreatedDate
-    private LocalDateTime created_date;
+    private LocalDateTime createdDate;
 
     @LastModifiedDate
-    private LocalDateTime last_modified_date;
+    private LocalDateTime lastModifiedDate;
 }

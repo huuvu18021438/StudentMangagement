@@ -1,10 +1,8 @@
 package io.demo.student_management.service;
 
 import io.demo.student_management.exception.CourseNotFoundException;
-import io.demo.student_management.mapper.StudentMapper;
 import io.demo.student_management.model.Course;
 import io.demo.student_management.repository.CourseRepository;
-import io.demo.student_management.repository.StudentCourseRepository;
 import io.demo.student_management.repository.StudentRepository;
 import io.demo.student_management.repository.TeacherRepository;
 import lombok.RequiredArgsConstructor;
@@ -16,10 +14,8 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class CourseService {
     private final CourseRepository courseRepository;
-    private final StudentCourseRepository studentCourseRepository;
     private final StudentRepository studentRepository;
     private final TeacherRepository teacherRepository;
-    private final StudentMapper studentMapper;
 
     public Flux<Course> findAll() {
         return courseRepository.findAll();

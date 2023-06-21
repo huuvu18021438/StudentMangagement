@@ -17,7 +17,7 @@ public class CourseResource {
 
     private List<Student> students;
 
-    private LocalDateTime created_date;
+    private LocalDateTime createdDate;
 
-    private LocalDateTime last_modified_date;
+    private LocalDateTime lastModifiedDate;
 }

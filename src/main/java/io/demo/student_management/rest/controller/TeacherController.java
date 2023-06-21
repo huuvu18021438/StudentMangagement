@@ -6,6 +6,7 @@ import io.demo.student_management.rest.reource.NewTeacherResource;
 import io.demo.student_management.rest.reource.TeacherResource;
 import io.demo.student_management.service.TeacherService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -13,6 +14,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/teachers")
 @RequiredArgsConstructor
+@Slf4j
 public class TeacherController {
     private final TeacherService teacherService;
     private final TeacherMapper teacherMapper;
@@ -28,7 +30,7 @@ public class TeacherController {
     }
 
     @PostMapping
-    public Mono<Teacher> create(NewTeacherResource newTeacherResource) {
+    public Mono<Teacher> create(@RequestBody NewTeacherResource newTeacherResource) {
         return teacherService.create(teacherMapper.toModel(newTeacherResource));
     }
 }

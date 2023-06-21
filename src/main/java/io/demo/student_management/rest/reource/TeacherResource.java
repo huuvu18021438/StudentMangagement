@@ -2,7 +2,6 @@ package io.demo.student_management.rest.reource;
 
 import io.demo.student_management.model.Course;
 import lombok.Data;
-
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class TeacherResource {
 
     private List<Course> courses;
 
-    private LocalDateTime created_date;
+    private LocalDateTime createdDate;
 
-    private LocalDateTime last_modified_date;
+    private LocalDateTime lastModifiedDate;
 }

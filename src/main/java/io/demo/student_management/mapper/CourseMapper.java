@@ -7,15 +7,12 @@ import io.demo.student_management.rest.reource.NewOrUpdateCourseResource;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Mapper(componentModel = "spring", uses = {StudentMapper.class, TeacherMapper.class})
+@Mapper(componentModel = "spring", uses = {TeacherMapper.class})
 public abstract class CourseMapper {
-    @Autowired
-    private StudentMapper studentMapper;
 
     public abstract CourseResource toResource(Course course);
 

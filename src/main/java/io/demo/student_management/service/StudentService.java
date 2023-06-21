@@ -16,7 +16,6 @@ import reactor.core.publisher.Mono;
 import reactor.util.function.Tuple2;
 
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -34,7 +33,7 @@ public class StudentService {
     @Transactional
     public Mono<Student> create(Student student) {
         if (student.getId() != null) {
-            return Mono.error(new IllegalArgumentException("When creating an student, the id must be null"));
+            return Mono.error(new IllegalArgumentException("When creating a student, the id must be null"));
         }
 
         return studentRepository.save(student)
@@ -47,7 +46,7 @@ public class StudentService {
     @Transactional
     public Mono<Student> update(Student student) {
         if (student.getId() == null) {
-            return Mono.error(new IllegalArgumentException("When updating an student, the id and the version must be provided"));
+            return Mono.error(new IllegalArgumentException("When updating a student, the id must be provided"));
         }
 
         return verifyExistence(student.getId())

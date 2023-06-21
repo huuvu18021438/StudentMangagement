@@ -4,7 +4,6 @@ import io.demo.student_management.model.Course;
 import io.demo.student_management.model.StudentCourse;
 import io.demo.student_management.rest.reource.CourseResource;
 import io.demo.student_management.rest.reource.NewOrUpdateCourseResource;
-import org.mapstruct.AfterMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;

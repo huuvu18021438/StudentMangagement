@@ -3,6 +3,7 @@ package io.demo.student_management.mapper;
 import io.demo.student_management.model.Student;
 import io.demo.student_management.model.StudentCourse;
 import io.demo.student_management.rest.reource.NewStudentResource;
+import io.demo.student_management.rest.reource.StudentResource;
 import io.demo.student_management.rest.reource.UpdateStudentResource;
 import org.mapstruct.AfterMapping;
 import org.mapstruct.Mapper;
@@ -21,7 +22,7 @@ public abstract class StudentMapper {
     @Autowired
     private CourseMapper courseMapper;
 
-    public abstract StudentCourse toResource(Student student);
+    public abstract StudentResource toResource(Student student);
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "address", ignore = true)

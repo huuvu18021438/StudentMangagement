@@ -11,4 +11,5 @@ public interface StudentCourseRepository extends R2dbcRepository<StudentCourse, 
     Flux<StudentCourse> findAllByStudentId(Long studentId);
 
     Mono<StudentCourse> deleteAllByStudentId(Long studentId);
+
 }

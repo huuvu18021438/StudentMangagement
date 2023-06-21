@@ -21,7 +21,9 @@ import java.util.List;
 public class Teacher {
     @Id
     private Long id;
+
     private String name;
+
     private String teacherType;
 
     @Transient

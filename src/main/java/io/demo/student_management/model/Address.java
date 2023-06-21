@@ -19,8 +19,11 @@ import java.time.LocalDateTime;
 public class Address {
     @Id
     private Long id;
+
     private String country;
+
     private String city;
+
     private String street;
 
     @CreatedDate

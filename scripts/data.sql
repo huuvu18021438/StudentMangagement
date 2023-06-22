@@ -24,3 +24,4 @@ INSERT INTO teacher (name, teachertype) VALUES
   ký hiệu toán học và các quy tắc cho các thao tác các ký hiệu trên; nó là một chủ đề thống nhất của hầu hết tất cả lĩnh vực của toán học.', 3);
 
 INSERT INTO student_course (studentid, courseid) VALUES (1, 1), (1, 2), (1, 3), (2, 1), (2, 3), (2, 4);
+INSERT INTO student_course (studentid, courseid) VALUES (1, 1), (1, 2), (1, 3), (2, 1), (2, 3), (2, 4);
